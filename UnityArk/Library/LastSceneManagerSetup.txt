@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ScreenShake.unity
+- path: Assets/Scenes/Cable.unity
   isLoaded: 1
   isActive: 1
