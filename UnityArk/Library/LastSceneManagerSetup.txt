@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Cable.unity
+- path: Assets/Scenes/PlayWithText.unity
   isLoaded: 1
   isActive: 1
