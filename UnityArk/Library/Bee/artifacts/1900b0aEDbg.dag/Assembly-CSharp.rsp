@@ -332,6 +332,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Examples/ShadersUdemy/NormalPlay.cs"
 "Assets/Scripts/CableComponent.cs"
 "Assets/Scripts/CableParticle.cs"
 "Assets/Scripts/LetterByLetter.cs"
