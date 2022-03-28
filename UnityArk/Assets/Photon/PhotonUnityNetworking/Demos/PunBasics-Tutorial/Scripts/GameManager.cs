@@ -8,6 +8,7 @@
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,15 +40,23 @@ namespace Photon.Pun.Demo.PunBasics
         [Tooltip("The prefab to use for representing the player")]
         [SerializeField]
         private GameObject playerPrefab;
+        [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
+        public static GameObject LocalPlayerInstance;
 
-        #endregion
+		#endregion
 
-        #region MonoBehaviour CallBacks
+		#region MonoBehaviour CallBacks
 
-        /// <summary>
-        /// MonoBehaviour method called on GameObject by Unity during initialization phase.
-        /// </summary>
-        void Start()
+
+        void Awake()
+        {
+
+		}
+
+		/// <summary>
+		/// MonoBehaviour method called on GameObject by Unity during initialization phase.
+		/// </summary>
+		void Start()
 		{
 			Instance = this;
 
