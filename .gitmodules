@@ -1,0 +1,3 @@
+[submodule "UnityArk/Assets/Submodules/Deflo_SubUnity"]
+	path = UnityArk/Assets/Submodules/Deflo_SubUnity
+	url = https://github.com/STFDFL/Deflo_SubUnity.git
