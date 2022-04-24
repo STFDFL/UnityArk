@@ -8,9 +8,17 @@ namespace PlayFabTesting
     public class TestGameManager : MonoBehaviour
     {
         [SerializeField] private Deflo.Deflo_PlayFabService _playFabSevice;
+        [Space(15)]
+        [Header("Login Panel")]
         [SerializeField] private GameObject _loginPanel;
+        [Space(15)]
+        [Header("Info Panel")]
         [SerializeField] private GameObject _userInfoPanel;
         [SerializeField] private TextMeshProUGUI _userIdLabel;
+        [Space(5)]
+        [Header("Items")]
+        [SerializeField] private TextMeshProUGUI _itemsLabel;
+        [SerializeField] private TextMeshProUGUI _swordBtnLabel;
         
         
         private LoginResult _loginResult;
@@ -54,6 +62,22 @@ namespace PlayFabTesting
            
         }
 
+        private void ShowUserInfoPanel()
+        {
+            HideAllPanels();
+            _userInfoPanel.SetActive(true);
+            RefreshInfoPanel();
+        }
+
+        public void RefreshInfoPanel()
+        {
+            _userIdLabel.text = $"User Id: {_loginResult?.PlayFabId}. Just created: {_loginResult?.NewlyCreated}. Entity type: {_loginResult?.EntityToken.Entity.Type}";
+            _itemsLabel.text = $"";
+        }
+
+        ///-------------------------------------------------
+        /// Buttons 
+        ///-------------------------------------------------
         public void OnPlayerLoginButtonPressed()
         {
             HideAllPanels();
@@ -66,13 +90,10 @@ namespace PlayFabTesting
             ShowUserInfoPanel();
         }
 
-        private void ShowUserInfoPanel()
+        public void OnBuySwordItemButtonPressed()
         {
-            HideAllPanels();
-            _userInfoPanel.SetActive(true);
-            _userIdLabel.text = 
-                $"User Id: {_loginResult?.PlayFabId}\n" +
-                $"Just created: {_loginResult?.NewlyCreated}";
+
+            RefreshInfoPanel();
         }
     }
 }
